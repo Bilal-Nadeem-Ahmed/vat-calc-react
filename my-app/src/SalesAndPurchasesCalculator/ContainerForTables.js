@@ -1,5 +1,6 @@
 import {  useState } from 'react';
-import VatOnSales from './VatOnSales'
+import VatOnSales from './VatOnSales';
+import VatOnPurchases from'./VatOnPurchases'
 const ContainerForTables = () => {
     
     const [selectedTab,setSelectedTab]=useState(true);
@@ -37,7 +38,7 @@ return (
                         <VatOnSales/>
                     </article>
                     <article role="tabpanel" tabIndex="0" aria-controls="tab-b" hidden={selectedTab} id="tab-b">
-                        <h1>hehkh</h1>
+                       <VatOnPurchases/>
                     </article>
                 </section>
                 <p>Put github link here</p>

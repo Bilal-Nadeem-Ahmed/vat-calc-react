@@ -3,7 +3,6 @@ const RemoveVat = ({val,update}) => {
     const newVal=parseInt(val);
     const handleClick=(e)=>{
         e.preventDefault();
-
         if (val===undefined){
             alert('Please Enter a valid Number')
         } else{

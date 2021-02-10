@@ -1,17 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import VatCalc from './quickVatCalculations/VatCalc';
+import "xp.css/dist/98.css" ;
+import ContainerForTables from './SalesAndPurchasesCalculator/ContainerForTables';
 
-import "xp.css/dist/98.css";
-import ContainerForTables from './ContainerForTables';
-
+//let stylesheet= "xp.css/dist/XP.css"
 function App() {
   return (
     <div className="App">
     <VatCalc/>
-    
     <ContainerForTables/>
-
    </div>
   );
 }
