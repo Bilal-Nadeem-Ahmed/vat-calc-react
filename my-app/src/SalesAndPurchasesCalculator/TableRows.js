@@ -24,11 +24,13 @@ const TableRows = ({desc,word,obj,addtoarr}) => {
   const HandleChangeVatVal=(e)=>{
 
    return  (  <input  
-                  className={`${desc}vr-input`}
+                  className={`${desc}vat-input`}
                   min={1} 
-                  onChange={(e)=>{ addtoarr(e.target.val);  
-                                   console.log(obj)}}  
-                  defaultValue={vatVal/120*20}
+                  onChange={(e)=>{ 
+                    e.preventDefault() 
+                    addtoarr(e.target.val);  
+                   }}  
+                  defaultValue={(vatVal/100*20).toFixed(2)}
                   onClick={(e)=>handleClick(e)} type="number"/>
           )
   }

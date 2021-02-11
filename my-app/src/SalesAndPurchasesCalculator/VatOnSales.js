@@ -12,6 +12,7 @@ const VatOnSales = () => {
     const [totalSalesMonth2,setSalesMonth2]=useState(0);
     const [totalSalesMonth3,setSalesMonth3]=useState(0);
     const [showMessage,setShowMessage]=useState('none');
+    const totalSales= totalSalesMonth1+totalSalesMonth2+totalSalesMonth3
   
 return ( 
 <div className="vatonsales">
@@ -44,9 +45,7 @@ return (
     />
     <TotalsMessage 
     showMessage={showMessage}
-    totalMonthOne={totalSalesMonth1}
-    totalMonthTwo={totalSalesMonth2}
-    totalMonthThree={totalSalesMonth3}
+    totalSales={totalSales}
     word={'sales'}
     />
    

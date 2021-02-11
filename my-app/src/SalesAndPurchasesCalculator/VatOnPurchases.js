@@ -12,8 +12,12 @@ const VatOnPurchases = () => {
     const [vatOnPurchasesMonth1,setVatOnPurchasesMonth1]=useState(0);
     const [vatOnPurchasesMonth2,setVatOnPurchasesMonth2]=useState(0);
     const [vatOnPurchasesMonth3,setVatOnPurchasesMonth3]=useState(0);
+    const [PurchasesExVatMonth1,setPurchasesExVatMonth1]=useState(0);
+    const [PurchasesExVatMonth2,setPurchasesExVatMonth2]=useState(0);
+    const [PurchasesExVatMonth3,setPurchasesExVatMonth3]=useState(0);
     const [showMessage,setShowMessage]=useState('none');
-  console.log(vatOnPurchasesMonth1)
+    const totalPurchasesExludingVat=PurchasesExVatMonth1+PurchasesExVatMonth2+PurchasesExVatMonth3;
+    const totalVatOnPurchases = vatOnPurchasesMonth1+vatOnPurchasesMonth2+vatOnPurchasesMonth3;
   
 return ( 
 <div className="vatonsales">
@@ -41,14 +45,16 @@ return (
     setVatOnPurchasesMonth1={(total)=>{setVatOnPurchasesMonth1(total)}}
     setVatOnPurchasesMonth2={(total)=>{setVatOnPurchasesMonth2(total)}}
     setVatOnPurchasesMonth3={(total)=>{setVatOnPurchasesMonth3(total)}}
+    setPurchasesExVatMonth1={(total)=>{setPurchasesExVatMonth1(total)}}
+    setPurchasesExVatMonth2={(total)=>{setPurchasesExVatMonth2(total)}}
+    setPurchasesExVatMonth3={(total)=>{setPurchasesExVatMonth3(total)}}
     setShowMessage={setShowMessage}
     monthClasses={monthclassespurchases}
     />
     <TotalsMessage 
     showMessage={showMessage}
-    totalMonthOne={vatOnPurchasesMonth1}
-    totalMonthTwo={vatOnPurchasesMonth2}
-    totalMonthThree={vatOnPurchasesMonth3}
+    totalPurchasesExludingVat={totalPurchasesExludingVat}
+    totalVatOnPurchases={totalVatOnPurchases}
     word={'purchases'}
     />
    
