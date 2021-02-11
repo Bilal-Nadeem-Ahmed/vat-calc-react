@@ -1,8 +1,8 @@
 import {useState, useEffect, useDebugValue } from 'react'
 import CalcButtonVat from './CalcButtonVat';
-import VatMonth from './VatMonth';
-import DateDisplay from './DateDisplay'
-import TotalsMessage from './TotalsMessage';
+import VatMonth from '../VatMonth';
+import DateDisplay from '../DateDisplay'
+import TotalsMessage from '../TotalsMessage';
 
 console.log(0)
 const VatOnPurchases = () => {

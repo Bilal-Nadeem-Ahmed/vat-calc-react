@@ -20,8 +20,8 @@ const TableRows = ({desc,word,obj,addtoarr}) => {
   const handleChangeVat=(e)=>{
       setVatVal(e.target.value)
   }
-  //component for below
-  const HandleChangeVatVal=(e)=>{
+//component for the table below
+  const VatOnPurchasesInput=(e)=>{
 
    return  (  <input  
                   className={`${desc}vat-input`}
@@ -41,7 +41,7 @@ const TableRows = ({desc,word,obj,addtoarr}) => {
               <td>
                   <input  className={`${desc}-input`} min={1}  onChange={(e)=>handleChange(e)} defaultValue={0} onClick={(e)=>handleClick(e)} type="number"/>
               </td>
-              <td>{val/120 *20}</td>
+              <td>{(val/120 *20).toFixed(2)}</td>
           </tr>
       );
     } else{
@@ -51,7 +51,7 @@ const TableRows = ({desc,word,obj,addtoarr}) => {
                 <input  className={`${desc}-input`} min={1} onChange={(e)=>handleChangeVat(e)}  defaultValue={0} onClick={(e)=>handleClick(e)} type="number"/>
             </td>
             <td>
-                <HandleChangeVatVal/>  
+                <VatOnPurchasesInput/>  
             </td>
               
           </tr>

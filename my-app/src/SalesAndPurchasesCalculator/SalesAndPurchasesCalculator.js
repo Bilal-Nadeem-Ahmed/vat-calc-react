@@ -1,7 +1,7 @@
 import {  useState } from 'react';
-import VatOnSales from './VatOnSales';
-import VatOnPurchases from'./VatOnPurchases'
-const ContainerForTables = () => {
+import VatOnSales from './sales/VatOnSales';
+import VatOnPurchases from'./purchases/VatOnPurchases';
+const SalesAndPurchasesCalculator = () => {
     
     const [selectedTab,setSelectedTab]=useState(true);
     const [notSelectedTab,setNotSelectedTab]=useState(false);      
@@ -41,11 +41,12 @@ return (
                        <VatOnPurchases/>
                     </article>
                 </section>
-                <p>Put github link here</p>
+                <p><a href={'https://github.com/Bilal-Nadeem-Ahmed/vat-calc-react'}>GitHub Vat Calculator </a> </p>
+                <p><a href={'https://github.com/botoxparty/XP.css/'}> CSS Link</a></p>
             </div>
         </div>
     </div>
     );
 }
  
-export default ContainerForTables;
+export default SalesAndPurchasesCalculator;
