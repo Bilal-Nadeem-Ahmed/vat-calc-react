@@ -1,7 +1,8 @@
 import { useState} from "react";
-// import VatMonth from "../VatMonth";
+
 import DateDisplay from "../../../../components/dateDisplay";
 import TotalsMessage from "../TotalsMessage";
+import VatMonthPurchases from "./subcomponents/vatMonthPurchases";
 
 const VatOnPurchases = () => {
  
@@ -39,24 +40,34 @@ const VatOnPurchases = () => {
     <div className="vatonpurchases">
       <div className="vatonspurchasestables">
         <DateDisplay />
-        {/* <VatMonth
+        
+        <VatMonthPurchases
           word={"Purchases"}
           month={1}
+          values={vatOnPurchasesMonth1}
+          updateValues={setPurchasesExVatMonth1}
+          updateVatValues={setVatOnPurchasesMonth1}
           desc={monthclassespurchases[0]}
           key={1}
         />
-        <VatMonth
+        <VatMonthPurchases
           word={"Purchases"}
           month={2}
+          values={vatOnPurchasesMonth1}
+          updateValues={setPurchasesExVatMonth2}
+          updateVatValues={setVatOnPurchasesMonth2}
           desc={monthclassespurchases[1]}
           key={2}
         />
-        <VatMonth
+        <VatMonthPurchases
           word={"Purchases"}
           month={3}
+          values={vatOnPurchasesMonth1}
+          updateValues={setPurchasesExVatMonth3}
+          updateVatValues={setVatOnPurchasesMonth3}
           desc={monthclassespurchases[2]}
           key={3}
-        /> */}
+        />
       </div>
       <br />
    

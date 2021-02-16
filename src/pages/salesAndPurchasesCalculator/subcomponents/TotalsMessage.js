@@ -1,5 +1,5 @@
 
-const TotalsMessage = ({totalSales,totalPurchasesExludingVat,totalVatOnPurchases,showMessage,word}) => {
+const TotalsMessage = ({totalSales,totalPurchasesExludingVat,totalVatOnPurchases,word}) => {
     
     
     const totalVatOnSales=(totalSales/120*20).toFixed(2)

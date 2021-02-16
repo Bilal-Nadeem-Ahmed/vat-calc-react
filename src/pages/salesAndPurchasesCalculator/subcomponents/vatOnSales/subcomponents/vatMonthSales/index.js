@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Title from "../../../../../../components/dateDisplay/titleForMonths";
 
 const Input = ({ value, index, onChange,handleClick }) => (
   <input type='number' value={value} autoFocus={true} onClick={handleClick} onChange={onChange} key={index} />
@@ -9,24 +10,6 @@ const VatMonthSales = ({ word, values, updateValues, name }) => {
  
 
  
-
-  const Title = () => {
-    if (word === "Purchases") {
-      return (
-        <tr>
-          <th> {word} excl Vat</th>
-          <th> Vat On {word}</th>
-        </tr>
-      );
-    }
-
-    return (
-      <tr>
-        <th> Total {word}</th>
-        <th> Vat On {word}</th>
-      </tr>
-    );
-  };
 
   const handleChange = (e, index) => {
     e.preventDefault();
@@ -51,7 +34,7 @@ const VatMonthSales = ({ word, values, updateValues, name }) => {
       <h3>{name}</h3>
       <table>
         <thead>
-          <Title />
+        <Title word={word}/>
         </thead>
         <tbody>
           {totals.map((value, index) => {
