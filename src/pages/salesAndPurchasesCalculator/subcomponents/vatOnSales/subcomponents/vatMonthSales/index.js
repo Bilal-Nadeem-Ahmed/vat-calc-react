@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-
-
 const Input = ({ value, index, onChange,handleClick }) => (
   <input type='number' value={value} autoFocus={true} onClick={handleClick} onChange={onChange} key={index} />
 );
 
-const VatMonth = ({ word, values, updateValues, name }) => {
+const VatMonthSales = ({ word, values, updateValues, name }) => {
   const [totals, setTotals] = useState(values);
  
 
@@ -38,12 +36,10 @@ const VatMonth = ({ word, values, updateValues, name }) => {
     const newValues = [...values];
     newValues[index] = Number(inputValue);
 
-    console.log(newValues);
     setTotals(newValues);
-    // this fixes the issue of state not updating 
     updateValues(newValues)
   };
-  //
+  
   const handleClick=(e)=>{
     e.preventDefault()
     e.target.value=''
@@ -63,7 +59,6 @@ const VatMonth = ({ word, values, updateValues, name }) => {
               <tr key={`${value}-${index}`}>
                 <td >
                   <Input 
-                   
                     handleClick={(e)=>handleClick(e)}
                     index={index}
                     value={value}
@@ -81,4 +76,4 @@ const VatMonth = ({ word, values, updateValues, name }) => {
   );
 };
 
-export default VatMonth;
+export default VatMonthSales;

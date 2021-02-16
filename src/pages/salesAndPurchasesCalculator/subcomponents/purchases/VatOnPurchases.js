@@ -1,66 +1,44 @@
-import { useState, useEffect, useDebugValue } from "react";
-import CalcButtonVat from "./CalcButtonVat";
+import { useState} from "react";
 // import VatMonth from "../VatMonth";
-// import DateDisplay from "../../../../components/dateDisplay";
+import DateDisplay from "../../../../components/dateDisplay";
 import TotalsMessage from "../TotalsMessage";
 
-console.log(0);
 const VatOnPurchases = () => {
-  const days = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-  ];
+ 
+  const initialState = [...new Array(31)].map((i) => 0);
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
   const monthclassespurchases = [
     "purchasesvatmonth1",
     "purchasesvatmonth2",
     "purchasesvatmonth3",
   ];
-  const [vatOnPurchasesMonth1, setVatOnPurchasesMonth1] = useState(0);
-  const [vatOnPurchasesMonth2, setVatOnPurchasesMonth2] = useState(0);
-  const [vatOnPurchasesMonth3, setVatOnPurchasesMonth3] = useState(0);
-  const [PurchasesExVatMonth1, setPurchasesExVatMonth1] = useState(0);
-  const [PurchasesExVatMonth2, setPurchasesExVatMonth2] = useState(0);
-  const [PurchasesExVatMonth3, setPurchasesExVatMonth3] = useState(0);
-  const [showMessage, setShowMessage] = useState("none");
-  const totalPurchasesExludingVat =
-    PurchasesExVatMonth1 + PurchasesExVatMonth2 + PurchasesExVatMonth3;
-  const totalVatOnPurchases =
-    vatOnPurchasesMonth1 + vatOnPurchasesMonth2 + vatOnPurchasesMonth3;
+  const [vatOnPurchasesMonth1, setVatOnPurchasesMonth1] = useState(initialState);
+  const [vatOnPurchasesMonth2, setVatOnPurchasesMonth2] = useState(initialState);
+  const [vatOnPurchasesMonth3, setVatOnPurchasesMonth3] = useState(initialState);
+
+  const [PurchasesExVatMonth1, setPurchasesExVatMonth1] = useState(initialState);
+  const [PurchasesExVatMonth2, setPurchasesExVatMonth2] = useState(initialState);
+  const [PurchasesExVatMonth3, setPurchasesExVatMonth3] = useState(initialState);
+
+  const reducedVatOnPurchasesMonth1= vatOnPurchasesMonth1.reduce(reducer);
+  const reducedVatOnPurchasesMonth2= vatOnPurchasesMonth2.reduce(reducer);
+  const reducedVatOnPurchasesMonth3= vatOnPurchasesMonth3.reduce(reducer);
+
+  const reducedPurchasesExVatMonth1= PurchasesExVatMonth1.reduce(reducer);
+  const reducedPurchasesExVatMonth2= PurchasesExVatMonth2.reduce(reducer);
+  const reducedPurchasesExVatMonth3= PurchasesExVatMonth3.reduce(reducer);
+ 
+
+  
+
+  const totalPurchasesExludingVat =reducedPurchasesExVatMonth1+reducedPurchasesExVatMonth2+reducedPurchasesExVatMonth3;
+  const totalVatOnPurchases =reducedVatOnPurchasesMonth1+reducedVatOnPurchasesMonth2+reducedVatOnPurchasesMonth3;
 
   return (
-    <div className="vatonsales">
-      <div className="vatonsalestables">
-        {/* <DateDisplay days={days} /> */}
+    <div className="vatonpurchases">
+      <div className="vatonspurchasestables">
+        <DateDisplay />
         {/* <VatMonth
           word={"Purchases"}
           month={1}
@@ -81,30 +59,9 @@ const VatOnPurchases = () => {
         /> */}
       </div>
       <br />
-      <CalcButtonVat
-        setVatOnPurchasesMonth1={(total) => {
-          setVatOnPurchasesMonth1(total);
-        }}
-        setVatOnPurchasesMonth2={(total) => {
-          setVatOnPurchasesMonth2(total);
-        }}
-        setVatOnPurchasesMonth3={(total) => {
-          setVatOnPurchasesMonth3(total);
-        }}
-        setPurchasesExVatMonth1={(total) => {
-          setPurchasesExVatMonth1(total);
-        }}
-        setPurchasesExVatMonth2={(total) => {
-          setPurchasesExVatMonth2(total);
-        }}
-        setPurchasesExVatMonth3={(total) => {
-          setPurchasesExVatMonth3(total);
-        }}
-        setShowMessage={setShowMessage}
-        monthClasses={monthclassespurchases}
-      />
+   
+      
       <TotalsMessage
-        showMessage={showMessage}
         totalPurchasesExludingVat={totalPurchasesExludingVat}
         totalVatOnPurchases={totalVatOnPurchases}
         word={"purchases"}
