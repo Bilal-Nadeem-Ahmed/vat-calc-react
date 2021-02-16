@@ -13,7 +13,7 @@ const VatOnSales = () => {
   return (
     <div className="vatonsales">
       <div className="vatonsalestables">
-        {/* <DateDisplay /> */}
+        <DateDisplay />
         <VatMonth
         key={1}
           word={"sales"}

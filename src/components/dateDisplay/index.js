@@ -1,5 +1,6 @@
 const DateDesplay = () => {
-  const days = [...new Array(31)].map((i) => i + 1);
+  const days = [...new Array(31)].map((value,i) => value=i+1);
+  
   return (
     <div className="days">
       <table>
