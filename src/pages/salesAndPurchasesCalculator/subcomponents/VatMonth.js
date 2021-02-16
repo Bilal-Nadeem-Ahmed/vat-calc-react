@@ -8,6 +8,7 @@ const Input = ({ value, index, onChange,handleClick }) => (
 
 const VatMonth = ({ word, values, updateValues, name }) => {
   const [totals, setTotals] = useState(values);
+ 
 
  
 
@@ -32,12 +33,14 @@ const VatMonth = ({ word, values, updateValues, name }) => {
   const handleChange = (e, index) => {
     e.preventDefault();
     const inputValue = e.target.value;
+   
 
     const newValues = [...values];
     newValues[index] = Number(inputValue);
 
     console.log(newValues);
     setTotals(newValues);
+    // this fixes the issue of state not updating 
     updateValues(newValues)
   };
   //
@@ -68,6 +71,7 @@ const VatMonth = ({ word, values, updateValues, name }) => {
                     onChange={(v) => handleChange(v, index)}
                   />
                 </td>
+                <td>{(value/120*20).toFixed(2)}</td>
               </tr>
             );
           })}
