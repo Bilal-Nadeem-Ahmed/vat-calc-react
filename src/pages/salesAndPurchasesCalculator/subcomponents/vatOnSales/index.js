@@ -13,6 +13,7 @@ const VatOnSales = () => {
       <div className="vatonsalestables">
         {/* <DateDisplay /> */}
         <VatMonth
+        key={1}
           word={"sales"}
           values={monthOne}
           updateValues={setMonthOne}

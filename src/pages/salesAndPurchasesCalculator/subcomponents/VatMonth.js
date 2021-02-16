@@ -1,18 +1,15 @@
 import { useState } from "react";
-import TableRows from "./TableRows";
-import TableRowsPurchases from "./TableRows";
 
-const Input = ({ value, onChange }) => (
-  <input value={value} onChange={onChange} key={Math.random()} />
+
+
+const Input = ({ value, index, onChange,handleClick }) => (
+  <input type='number' value={value} autoFocus={true} onClick={handleClick} onChange={onChange} key={index} />
 );
 
 const VatMonth = ({ word, values, updateValues, name }) => {
   const [totals, setTotals] = useState(values);
 
-  const obj = [];
-  const addToArray = (a) => {
-    obj.push(a);
-  };
+ 
 
   const Title = () => {
     if (word === "Purchases") {
@@ -41,7 +38,14 @@ const VatMonth = ({ word, values, updateValues, name }) => {
 
     console.log(newValues);
     setTotals(newValues);
+    updateValues(newValues)
   };
+  //
+  const handleClick=(e)=>{
+    e.preventDefault()
+    e.target.value=''
+
+  }
 
   return (
     <div>
@@ -54,9 +58,13 @@ const VatMonth = ({ word, values, updateValues, name }) => {
           {totals.map((value, index) => {
             return (
               <tr key={`${value}-${index}`}>
-                <td>
-                  <Input
+                <td >
+                  <Input 
+                   
+                    handleClick={(e)=>handleClick(e)}
+                    index={index}
                     value={value}
+                    setTotals={(val)=>setTotals(val)}
                     onChange={(v) => handleChange(v, index)}
                   />
                 </td>
