@@ -43,7 +43,7 @@ const VatOnSales = () => {
         />
       </div>
       <br />
-      <TotalsMessage showMessage={true} totalSales={totalSales} word="sales" />
+      <TotalsMessage totalSales={totalSales} word="sales" />
       <PrintButton/>
     </div>
   );
