@@ -1,6 +1,6 @@
 {
   "homepage": "https://bilal-nadeem-ahmed.github.io/vat-calc-react/",
-  "name": "my-app",
+  "name": "vat-calc-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
