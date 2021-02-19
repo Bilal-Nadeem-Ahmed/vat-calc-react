@@ -55,7 +55,6 @@
       "object-curly-newline": "off",
       "newline-before-return": "warn",
       "arrow-body-style": "warn",
-
       "react/jsx-filename-extension": "off",
       "react/jsx-sort-props": "warn",
       "react/react-in-jsx-scope": "off",
