@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/vat-calc-react/static/css/main.ee8f6499.chunk.css",
+    "main.js": "/vat-calc-react/static/js/main.c1f8a13d.chunk.js",
+    "main.js.map": "/vat-calc-react/static/js/main.c1f8a13d.chunk.js.map",
+    "runtime-main.js": "/vat-calc-react/static/js/runtime-main.447a1d76.js",
+    "runtime-main.js.map": "/vat-calc-react/static/js/runtime-main.447a1d76.js.map",
+    "static/css/2.ef142186.chunk.css": "/vat-calc-react/static/css/2.ef142186.chunk.css",
+    "static/js/2.be9393a9.chunk.js": "/vat-calc-react/static/js/2.be9393a9.chunk.js",
+    "static/js/2.be9393a9.chunk.js.map": "/vat-calc-react/static/js/2.be9393a9.chunk.js.map",
+    "static/js/3.51f27d17.chunk.js": "/vat-calc-react/static/js/3.51f27d17.chunk.js",
+    "static/js/3.51f27d17.chunk.js.map": "/vat-calc-react/static/js/3.51f27d17.chunk.js.map",
+    "index.html": "/vat-calc-react/index.html",
+    "static/css/2.ef142186.chunk.css.map": "/vat-calc-react/static/css/2.ef142186.chunk.css.map",
+    "static/css/main.ee8f6499.chunk.css.map": "/vat-calc-react/static/css/main.ee8f6499.chunk.css.map",
+    "static/js/2.be9393a9.chunk.js.LICENSE.txt": "/vat-calc-react/static/js/2.be9393a9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/vat-calc-react/static/media/1353275.8992ea8c.jpg",
+    "static/media/98.css": "/vat-calc-react/static/media/ms_sans_serif_bold.9fbe7124.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.447a1d76.js",
+    "static/css/2.ef142186.chunk.css",
+    "static/js/2.be9393a9.chunk.js",
+    "static/css/main.ee8f6499.chunk.css",
+    "static/js/main.c1f8a13d.chunk.js"
+  ]
+}
