@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/css/main.54224ab5.chunk.css",
+    "main.js": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/main.d3d88eee.chunk.js",
+    "main.js.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/main.d3d88eee.chunk.js.map",
+    "runtime-main.js": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/runtime-main.d65f566f.js",
+    "runtime-main.js.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/runtime-main.d65f566f.js.map",
+    "static/css/2.1383181a.chunk.css": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/css/2.1383181a.chunk.css",
+    "static/js/2.4b3025ef.chunk.js": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/2.4b3025ef.chunk.js",
+    "static/js/2.4b3025ef.chunk.js.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/2.4b3025ef.chunk.js.map",
+    "static/js/3.c79f4495.chunk.js": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/3.c79f4495.chunk.js",
+    "static/js/3.c79f4495.chunk.js.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/3.c79f4495.chunk.js.map",
+    "index.html": "/Bilal-Nadeem-Ahmed/vat-calc-react/index.html",
+    "static/css/2.1383181a.chunk.css.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/css/2.1383181a.chunk.css.map",
+    "static/css/main.54224ab5.chunk.css.map": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/css/main.54224ab5.chunk.css.map",
+    "static/js/2.4b3025ef.chunk.js.LICENSE.txt": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/js/2.4b3025ef.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/media/1353275.8992ea8c.jpg",
+    "static/media/98.css": "/Bilal-Nadeem-Ahmed/vat-calc-react/static/media/ms_sans_serif_bold.9fbe7124.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d65f566f.js",
+    "static/css/2.1383181a.chunk.css",
+    "static/js/2.4b3025ef.chunk.js",
+    "static/css/main.54224ab5.chunk.css",
+    "static/js/main.d3d88eee.chunk.js"
+  ]
+}
